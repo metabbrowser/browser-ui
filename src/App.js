@@ -3,18 +3,14 @@ import "./App.css";
 import SetTheme from "./utils/themes";
 import Theme from "./utils/theme";
 import { THEMES } from "./utils/constants";
-import MetabIconButton from "./components/buttons";
+import WebPageView from "./containers/browse/browseView";
 
 const App = () => {
   // initializations
   SetTheme(THEMES.DARK);
+  // TODO: Initialize user preference shortcut keys
 
-  return (
-    <h1>
-      Hellow{Theme.COLORS.black}
-      <MetabIconButton />
-    </h1>
-  );
+  return <WebPageView />;
 };
 
 export default App;
