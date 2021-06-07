@@ -1,3 +1,22 @@
+import KeyShortcuts from "../components/atomic/keyShortcuts";
+import KEY_SHORTCUTS from "./keyShortcuts";
+import { ReactComponent as Back } from "../assets/icons/Back.svg";
+import { ReactComponent as Camera } from "../assets/icons/Camera.svg";
+import { ReactComponent as Close } from "../assets/icons/Close.svg";
+import { ReactComponent as Copy } from "../assets/icons/Copy.svg";
+import { ReactComponent as DarkMode } from "../assets/icons/DarkMode.svg";
+import { ReactComponent as Drag } from "../assets/icons/Drag.svg";
+import { ReactComponent as Focus } from "../assets/icons/Focus.svg";
+import { ReactComponent as Info } from "../assets/icons/Info.svg";
+import { ReactComponent as Next } from "../assets/icons/Next.svg";
+import { ReactComponent as Notes } from "../assets/icons/Notes.svg";
+import { ReactComponent as Reload } from "../assets/icons/Reload.svg";
+import { ReactComponent as Remove } from "../assets/icons/Remove.svg";
+import { ReactComponent as Scribbble } from "../assets/icons/Scribbble.svg";
+import { ReactComponent as Sidebar } from "../assets/icons/Sidebar.svg";
+import { ReactComponent as Snooze } from "../assets/icons/Snooze.svg";
+import { ReactComponent as Star } from "../assets/icons/Star.svg";
+import { ReactComponent as Video } from "../assets/icons/Video.svg";
 // default theme
 
 //TODO: Change it to Cabin
@@ -14,7 +33,7 @@ const common = {
   },
 };
 
-const COLORS = {
+let COLORS = {
   shades: {
     color_1: "#000000", // pure black
     color_2: "#342E2D", // black
@@ -64,6 +83,9 @@ const COLORS = {
       background: common.text,
       boxShadow: `0px 11px 16px rgba(0, 0, 0, 0.12), 0px 1px 65px rgba(0, 0, 0, 0.21)`,
     },
+  },
+  icons: {
+    color_1: "#56D00C", // black
   },
 };
 const FONTS = {
@@ -139,6 +161,195 @@ const Theme = {
   COLORS,
   FONTS,
   SPACING,
+};
+console.log("themes");
+
+const changeColors = (color1, color2, color3, color4) => {
+  return {
+    "& > *": {
+      fill: color1,
+      stroke: color2,
+    },
+    "& path": {
+      fill: color3,
+      stroke: color4,
+    },
+  };
+};
+
+export let ICONS_SVG = {
+  back: {
+    svg: <Back />,
+    name: "Back",
+    css: changeColors(
+      null,
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1
+    ),
+    popOverContent: <KeyShortcuts>{KEY_SHORTCUTS.back}</KeyShortcuts>,
+  },
+  camera: {
+    svg: <Camera />,
+    name: "Camera",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1,
+      null
+    ),
+    popOverContent: <KeyShortcuts>{KEY_SHORTCUTS.screenshot}</KeyShortcuts>,
+  },
+  close: {
+    svg: <Close />,
+    name: "Close",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1,
+      null
+    ),
+  },
+  copy: {
+    svg: <Copy />,
+    name: "Copy",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1,
+      null
+    ),
+  },
+  darkMode: {
+    svg: <DarkMode />,
+    name: "Dark Mode",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1,
+      null
+    ),
+  },
+  drag: {
+    svg: <Drag />,
+    name: "Drag",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1,
+      null
+    ),
+  },
+  focus: {
+    svg: <Focus />,
+    name: "Focus",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1,
+      null
+    ),
+  },
+  info: {
+    svg: <Info />,
+    name: "Info",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1,
+      null
+    ),
+  },
+  next: {
+    svg: <Next />,
+    name: "Next",
+    css: changeColors(
+      null,
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1
+    ),
+  },
+  notes: {
+    svg: <Notes />,
+    name: "Notes",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1,
+      null
+    ),
+  },
+  reload: {
+    svg: <Reload />,
+    name: "Reload",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1,
+      null
+    ),
+  },
+  remove: {
+    svg: <Remove />,
+    name: "Minimize",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      Theme.COLORS.icons.color_1,
+      Theme.COLORS.icons.color_1,
+      Theme.COLORS.icons.color_1
+    ),
+  },
+  scribbble: {
+    svg: <Scribbble />,
+    name: "Scribbble",
+    css: changeColors(
+      null,
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1
+    ),
+  },
+  sidebar: {
+    svg: <Sidebar />,
+    name: "Split Screen",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1,
+      null
+    ),
+  },
+  snooze: {
+    svg: <Snooze />,
+    name: "Snooze",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1,
+      null
+    ),
+  },
+  star: {
+    svg: <Star />,
+    name: "Bookmark",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1,
+      null
+    ),
+  },
+  video: {
+    svg: <Video />,
+    name: "Video Conference",
+    css: changeColors(
+      Theme.COLORS.icons.color_1,
+      null,
+      Theme.COLORS.icons.color_1,
+      null
+    ),
+  },
 };
 
 export default Theme;

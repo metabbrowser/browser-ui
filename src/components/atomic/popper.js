@@ -9,13 +9,13 @@ import Theme from "../../utils/theme";
 
 const useStyles = makeStyles((theme) => ({
   content: {
-    padding: `${Theme.SPACING(12)} ${Theme.SPACING(16)}`,
-    ...Theme.FONTS.cabin.subHeading.bold,
+    padding: `${Theme.SPACING(8)} ${Theme.SPACING(8)}`,
+    ...Theme.FONTS.cabin.small.bold,
     color: Theme.COLORS.shades.color_2,
   },
   paper: {
     background: Theme.COLORS.shades.color_8,
-    borderRadius: Theme.SPACING(16),
+    borderRadius: Theme.SPACING(10),
     margin: Theme.SPACING(4),
     ...Theme.COLORS.effects.medium_blur,
   },

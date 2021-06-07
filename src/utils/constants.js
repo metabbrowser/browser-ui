@@ -10,6 +10,7 @@ const urlBuilder = (domain) => {
   return `${faviconProvider}${domain}${extension}`;
 };
 
+// ICONS[Math.round(Math.random() * 20)];
 export const ICONS = [
   urlBuilder("dribbble.com"),
   urlBuilder("figma.com"),
@@ -31,5 +32,5 @@ export const ICONS = [
   urlBuilder("reddit.com"),
   urlBuilder("behance.net"),
   urlBuilder("wikihow.com"),
-  urlBuilder("instagram.com"),
+  urlBuilder("youtube.com"),
 ];

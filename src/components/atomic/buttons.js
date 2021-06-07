@@ -6,6 +6,9 @@ import IconButton from "@material-ui/core/IconButton";
 import PositionedPopper from "./popper";
 import KeyShortcuts from "./keyShortcuts";
 import KEY_SHORTCUTS from "../../utils/keyShortcuts";
+import Theme from "../../utils/theme";
+import { ICONS_SVG } from "../../utils/theme";
+import IconWrapper from "./iconWrapper";
 
 // TODO: Take the dominant colour pallete from the icons using https://lokeshdhakar.com/projects/color-thief/
 // TODO: Add props to customize the component - Popper, size, color, icon
@@ -16,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     width: "fit-content",
     height: "fit-content",
   },
+  // svg: { ...ICONS_SVG.back.css },
 }));
 
 // FIXME: PROPS:
@@ -51,26 +55,37 @@ const MetabIconButton = (props) => {
       onMouseEnter={
         props.popOverOrientation
           ? handleMouseEnter(props.popOverOrientation)
-          : handleMouseEnter("right")
+          : handleMouseEnter("bottom")
       }
       onMouseLeave={handleMouseLeave()}
       title={props.title ? props.title : ""}
     >
-      {props.showPopOver ? (
+      {props?.showPopOver && props?.popOverContent ? (
         <PositionedPopper open={open} anchorEl={anchorEl} placement={placement}>
-          The content of the Popper <br />{" "}
-          <KeyShortcuts>{KEY_SHORTCUTS.tab_switching}</KeyShortcuts>
+          {props?.popOverContent ? (
+            <>
+              {props.children.name ? props.children.name : ""} <br />
+              {props?.popOverContent}
+            </>
+          ) : (
+            ""
+          )}
         </PositionedPopper>
       ) : (
         <></>
       )}
       <IconButton size={props.iconSize ? props.iconSize : "small"}>
-        {/* ICONS[Math.round(Math.random() * 20)] */}
-        <img
-          src={props.iconURL ? props.iconURL : ICONS[0]}
-          alt={props.iconAltText ? props.iconAltText : "icon"}
-          style={{ width: "30px", height: "30px" }}
-        ></img>
+        {props.iconURL ? (
+          <img
+            src={props.iconURL ? props.iconURL : ICONS[0]}
+            alt={props.iconAltText ? props.iconAltText : "icon"}
+            style={{ width: "15px", height: "15px" }}
+          ></img>
+        ) : (
+          <IconWrapper css={props.children?.css}>
+            {props.children?.svg}
+          </IconWrapper>
+        )}
         {/* <DeleteIcon fontSize="large" /> */}
       </IconButton>
     </div>

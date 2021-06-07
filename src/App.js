@@ -4,13 +4,14 @@ import SetTheme from "./utils/themes";
 import Theme from "./utils/theme";
 import { THEMES } from "./utils/constants";
 import WebPageView from "./containers/browse/browseView";
+import FixedView from "./containers/fixed/fixedView";
 
 const App = () => {
   // initializations
   SetTheme(THEMES.DARK);
   // TODO: Initialize user preference shortcut keys
 
-  return <WebPageView />;
+  return <FixedView />;
 };
 
 export default App;
