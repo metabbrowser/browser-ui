@@ -6,44 +6,67 @@ import Footer from "../../components/fixed/footer";
 import SvgTest from "../tests/svgTest";
 import Theme from "../../utils/theme";
 import FlexLayout from "../../components/atomic/flexLayout";
-import Background from "../../assets/images/gmail_screenshot.png";
+import WebContent from "../../components/fixed/webContent";
+import TabsDivider from "../../components/fixed/tabsDivider";
+
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  webContents: {
+    // background: Theme.COLORS.shades.color_8,
+    border: `${Theme.COLORS.shades.color_5} solid 1px `,
+    borderRadius: Theme.SPACING(20),
+    // margin: `${Theme.SPACING(10)} ${Theme.SPACING(2)}`,
+    height: "90vh",
+    width: "93vw",
+    ...Theme.COLORS.effects.medium_blur,
+    overflowX: "scroll",
+    overflowY: "hidden",
+    "&::-webkit-scrollbar": {
+      display: "none",
+      width: 0,
+      background: "transparent",
+    },
+  },
+  fixedView: {
+    background: Theme.COLORS.shades.color_7,
+  },
+}));
+
 const FixedView = () => {
+  const classes = useStyles();
   return (
-    <div
-      style={{
-        width: "100vw",
-        height: "100vh",
-        background: Theme.COLORS.shades.color_7,
-      }}
+    <FlexLayout
+      className={classes.fixedView}
+      flexDirection="column"
+      alignContent="space-between"
+      width="100vw"
+      height="100vh"
     >
       <Header />
       {/* <SvgTest /> */}
       <FlexLayout
         width="100vw"
-        height="89vh"
         justifyContent="space-between"
         alignItems="flex-start"
+        style={{ flexGrow: 1 }}
       >
-        <LeftSideBar />
-        <div
-          style={{
-            // border: `${Theme.SPACING(3)} solid ${Theme.COLORS.shades.color_5}`,
-            // background: Theme.COLORS.shades.color_8,
-            borderRadius: Theme.SPACING(15),
-            flexGrow: 1,
-            height: "88vh",
-            backgroundImage: `url(${Background})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            ...Theme.COLORS.effects.medium_blur,
-          }}
-        ></div>
-        <RightSideBar />
+        <LeftSideBar style={{ flexGrow: 1 }} />
+        <div className={classes.webContents} style={{ flexGrow: 1 }}>
+          <FlexLayout width={1620 * 5 + 50}>
+            <WebContent />
+            <TabsDivider />
+            <WebContent />
+            <WebContent />
+            <WebContent />
+            <WebContent />
+          </FlexLayout>
+        </div>
+        <RightSideBar style={{ flexGrow: 1 }} />
       </FlexLayout>
       <Footer />
       {/* <SvgTest /> */}
-    </div>
+    </FlexLayout>
   );
 };
 

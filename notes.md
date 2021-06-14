@@ -8,6 +8,11 @@ Favicon (100 request/IP/min)
 - http://icons.duckduckgo.com/ip2/dribbble.com.ico
 - https://www.google.com/s2/favicons?domain=dribbble.com
 
+Visit counters
+
+- https://visitor-badge.glitch.me/
+- https://hitcounter.pythonanywhere.com
+
 ## Project Structure
 
 - Login
@@ -32,3 +37,5 @@ Favicon (100 request/IP/min)
 - inspect(dev mode)
 - (design mode)
 - browse
+
+// TODO: Add zoom + and - icon

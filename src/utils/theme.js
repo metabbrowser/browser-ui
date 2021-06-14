@@ -284,21 +284,16 @@ export let ICONS_SVG = {
     svg: <Reload />,
     name: "Reload",
     css: changeColors(
-      Theme.COLORS.icons.color_1,
+      null,
       null,
       Theme.COLORS.icons.color_1,
-      null
+      Theme.COLORS.icons.color_1
     ),
   },
   remove: {
     svg: <Remove />,
     name: "Minimize",
-    css: changeColors(
-      Theme.COLORS.icons.color_1,
-      Theme.COLORS.icons.color_1,
-      Theme.COLORS.icons.color_1,
-      Theme.COLORS.icons.color_1
-    ),
+    css: changeColors(null, null, Theme.COLORS.icons.color_1, null),
   },
   scribbble: {
     svg: <Scribbble />,

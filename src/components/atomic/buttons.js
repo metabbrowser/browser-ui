@@ -61,10 +61,21 @@ const MetabIconButton = (props) => {
       title={props.title ? props.title : ""}
     >
       {props?.showPopOver && props?.popOverContent ? (
-        <PositionedPopper open={open} anchorEl={anchorEl} placement={placement}>
+        <PositionedPopper
+          open={open}
+          anchorEl={anchorEl}
+          placement={placement}
+          paperCSS={props?.paperCSS}
+        >
           {props?.popOverContent ? (
             <>
-              {props.children.name ? props.children.name : ""} <br />
+              {props?.children?.name ? (
+                <>
+                  {props?.children?.name} <br />
+                </>
+              ) : (
+                ""
+              )}
               {props?.popOverContent}
             </>
           ) : (

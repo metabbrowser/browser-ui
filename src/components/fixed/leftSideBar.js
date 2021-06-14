@@ -5,6 +5,7 @@ import MetabIconButton from "../atomic/buttons";
 import FlexLayout from "../atomic/flexLayout";
 import { ICONS } from "../../utils/constants";
 import { Divider } from "@material-ui/core";
+import TabsTest from "../../containers/tests/tabsTest";
 
 const useStyles = makeStyles((theme) => ({
   pinned: {
@@ -20,72 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
 const LeftSideBar = () => {
   const classes = useStyles();
-  return (
-    <FlexLayout direction="column" className={classes.pinned}>
-      <Divider light className={classes.divider} />
-      <MetabIconButton
-        showPopOver={false}
-        iconSize="medium"
-        iconURL={ICONS[Math.round(Math.random() * 20)]}
-      ></MetabIconButton>
-      <MetabIconButton
-        showPopOver={false}
-        iconSize="medium"
-        iconURL={ICONS[Math.round(Math.random() * 20)]}
-      ></MetabIconButton>
-      <MetabIconButton
-        showPopOver={false}
-        iconSize="medium"
-        iconURL={ICONS[Math.round(Math.random() * 20)]}
-      ></MetabIconButton>
-      <MetabIconButton
-        showPopOver={false}
-        iconSize="medium"
-        iconURL={ICONS[Math.round(Math.random() * 20)]}
-      ></MetabIconButton>
-      <MetabIconButton
-        showPopOver={false}
-        iconSize="medium"
-        iconURL={ICONS[Math.round(Math.random() * 20)]}
-      ></MetabIconButton>
-      <MetabIconButton
-        showPopOver={false}
-        iconSize="medium"
-        iconURL={ICONS[Math.round(Math.random() * 20)]}
-      ></MetabIconButton>
-      <Divider light className={classes.divider} />
-      <MetabIconButton
-        showPopOver={false}
-        iconSize="medium"
-        iconURL={ICONS[Math.round(Math.random() * 20)]}
-      ></MetabIconButton>
-      <MetabIconButton
-        showPopOver={false}
-        iconSize="medium"
-        iconURL={ICONS[Math.round(Math.random() * 20)]}
-      ></MetabIconButton>
-      <MetabIconButton
-        showPopOver={false}
-        iconSize="medium"
-        iconURL={ICONS[Math.round(Math.random() * 20)]}
-      ></MetabIconButton>
-      <MetabIconButton
-        showPopOver={false}
-        iconSize="medium"
-        iconURL={ICONS[Math.round(Math.random() * 20)]}
-      ></MetabIconButton>
-      <MetabIconButton
-        showPopOver={false}
-        iconSize="medium"
-        iconURL={ICONS[Math.round(Math.random() * 20)]}
-      ></MetabIconButton>
-      <MetabIconButton
-        showPopOver={false}
-        iconSize="medium"
-        iconURL={ICONS[Math.round(Math.random() * 20)]}
-      ></MetabIconButton>
-    </FlexLayout>
-  );
+  return <TabsTest />;
 };
 
 export default LeftSideBar;

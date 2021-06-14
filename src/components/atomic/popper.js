@@ -27,37 +27,36 @@ const useStyles = makeStyles((theme) => ({
 export default function PositionedPopper(props) {
   const classes = useStyles();
   return (
-    <div>
-      <Popper
-        open={props.open}
-        anchorEl={props.anchorEl}
-        placement={props.placement}
-        transition
-        disablePortal={false}
-        modifiers={{
-          flip: {
-            enabled: true,
-          },
-          preventOverflow: {
-            enabled: true,
-            boundariesElement: "scrollParent",
-          },
-          arrow: {
-            enabled: true,
-            // element: props.anchorEl,
-          },
-        }}
-        className={classes.popper}
-      >
-        {({ TransitionProps }) => (
-          <Fade {...TransitionProps} timeout={350}>
-            <Paper className={classes.paper}>
-              <div className={classes.content}>{props.children}</div>
-            </Paper>
-          </Fade>
-        )}
-      </Popper>
-    </div>
+    <Popper
+      open={props.open}
+      anchorEl={props.anchorEl}
+      placement={props.placement}
+      transition
+      disablePortal={false}
+      modifiers={{
+        flip: {
+          enabled: true,
+        },
+        preventOverflow: {
+          enabled: true,
+          boundariesElement: "scrollParent",
+        },
+        arrow: {
+          enabled: true,
+          // element: props.anchorEl,
+        },
+      }}
+      className={classes.popper}
+      style={{ ...props?.paperCSS }}
+    >
+      {({ TransitionProps }) => (
+        <Fade {...TransitionProps} timeout={350}>
+          <Paper className={classes.paper}>
+            <div className={classes.content}>{props.children}</div>
+          </Paper>
+        </Fade>
+      )}
+    </Popper>
   );
 }
 

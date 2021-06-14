@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   search: {
     minWidth: "fit-content",
-    maxWidth: Theme.SPACING(600),
+    maxWidth: Theme.SPACING(700),
     flexGrow: 1,
   },
   pageTools: {},
@@ -24,7 +24,7 @@ const Header = () => {
   const classes = useStyles();
   return (
     <FlexLayout width="100%" flexWrap="no-wrap" justifyContent="flex-start">
-      <FlexLayout className={classes.container}>
+      <FlexLayout className={classes.container} height={Theme.SPACING(40)}>
         <MetabIconButton
           showPopOver={true}
           iconSize="medium"
