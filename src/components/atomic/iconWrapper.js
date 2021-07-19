@@ -6,6 +6,9 @@ const useStyles = (props) =>
     svg: { ...props.css },
   });
 
+// TODO: IconWrapper - write proper comments don't know what it is doing but
+// it is used inside buttons.js MetabIconButton Component
+
 const IconWrapper = (props) => {
   const { svg } = useStyles(props)();
 

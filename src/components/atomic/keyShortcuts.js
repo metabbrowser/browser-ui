@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// KeyShortcuts has the logic to display Key shortcuts with proper
+// TODO: OS key layouts
+
 const KeyShortcuts = (props) => {
   const classes = useStyles();
   let keys = props.children.split("|");

@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
 // -title,
 // extra sizes of icon
 
+// TODO: This is ICON BUTTON but also create a normal button and its variants
 const MetabIconButton = (props) => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -58,15 +59,13 @@ const MetabIconButton = (props) => {
           : handleMouseEnter("bottom")
       }
       onMouseLeave={handleMouseLeave()}
-      title={props.title ? props.title : ""}
-    >
+      title={props.title ? props.title : ""}>
       {props?.showPopOver && props?.popOverContent ? (
         <PositionedPopper
           open={open}
           anchorEl={anchorEl}
           placement={placement}
-          paperCSS={props?.paperCSS}
-        >
+          paperCSS={props?.paperCSS}>
           {props?.popOverContent ? (
             <>
               {props?.children?.name ? (
@@ -90,8 +89,7 @@ const MetabIconButton = (props) => {
           <img
             src={props.iconURL ? props.iconURL : ICONS[0]}
             alt={props.iconAltText ? props.iconAltText : "icon"}
-            style={{ width: "15px", height: "15px" }}
-          ></img>
+            style={{ width: "15px", height: "15px" }}></img>
         ) : (
           <IconWrapper css={props.children?.css}>
             {props.children?.svg}

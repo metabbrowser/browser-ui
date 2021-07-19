@@ -1,7 +1,7 @@
 import react from "react";
 import Theme, { ICONS_SVG } from "../../utils/theme";
 import { makeStyles } from "@material-ui/core/styles";
-import MetabIconButton from "../../components/atomic/buttons";
+import MetabIconButton from "./button";
 import FlexLayout from "../../components/atomic/flexLayout";
 import { ICONS } from "../../utils/constants";
 import screenshot from "../../assets/images/gmail_screenshot.png";
@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// TabButton creates a tab icon in the tab bar which has a popover, icon and
+// TODO: a onclick function
+
 const TabButton = (props) => {
   const classes = useStyles();
   const icon = ICONS[Math.round(Math.random() * 20)];
@@ -37,13 +40,11 @@ const TabButton = (props) => {
           <img
             src={screenshot}
             alt="Heading Text"
-            className={classes.screenshot}
-          ></img>
+            className={classes.screenshot}></img>
         </>
       }
       paperCSS={{ marginLeft: Theme.SPACING(40) }}
-      popOverOrientation="right"
-    ></MetabIconButton>
+      popOverOrientation="right"></MetabIconButton>
   );
 };
 

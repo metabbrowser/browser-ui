@@ -1,7 +1,7 @@
 import react from "react";
 import Theme, { ICONS_SVG } from "../../utils/theme";
 import { makeStyles } from "@material-ui/core/styles";
-import MetabIconButton from "../atomic/buttons";
+import MetabIconButton from "../atomic/button";
 import FlexLayout from "../atomic/flexLayout";
 import { ICONS } from "../../utils/constants";
 import { Divider } from "@material-ui/core";
@@ -21,7 +21,11 @@ const useStyles = makeStyles((theme) => ({
 
 const LeftSideBar = () => {
   const classes = useStyles();
-  return <TabsTest />;
+  return (
+    <>
+      <TabsTest />
+    </>
+  );
 };
 
 export default LeftSideBar;

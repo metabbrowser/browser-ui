@@ -1,6 +1,6 @@
 import react from "react";
 import Theme, { ICONS_SVG } from "../../utils/theme";
-import MetabIconButton from "../atomic/buttons";
+import MetabIconButton from "../atomic/button";
 import FlexLayout from "../atomic/flexLayout";
 import { ICONS } from "../../utils/constants";
 import { makeStyles } from "@material-ui/core/styles";
@@ -28,15 +28,13 @@ const Header = () => {
         <MetabIconButton
           showPopOver={true}
           iconSize="medium"
-          popOverContent={ICONS_SVG.back.popOverContent}
-        >
+          popOverContent={ICONS_SVG.back.popOverContent}>
           {ICONS_SVG.back}
         </MetabIconButton>
         <MetabIconButton
           showPopOver={true}
           iconSize="medium"
-          popOverContent={ICONS_SVG.back.popOverContent}
-        >
+          popOverContent={ICONS_SVG.back.popOverContent}>
           {ICONS_SVG.next}
         </MetabIconButton>
       </FlexLayout>
@@ -44,8 +42,7 @@ const Header = () => {
         className={`${classes.container} ${classes.search}`}
         height={Theme.SPACING(40)}
         width="100%"
-        justifyContent="space-between"
-      >
+        justifyContent="space-between">
         <FlexLayout>
           <MetabIconButton
             showPopOver={true}
@@ -57,8 +54,7 @@ const Header = () => {
               ...Theme.FONTS.cabin.subHeading.regular,
               color: Theme.COLORS.shades.color_3,
               cursor: "pointer",
-            }}
-          >
+            }}>
             Inbox Gmail - 10892 unread
           </p>
         </FlexLayout>
@@ -66,49 +62,42 @@ const Header = () => {
           <MetabIconButton
             showPopOver={true}
             iconSize="medium"
-            popOverContent={ICONS_SVG.back.popOverContent}
-          >
+            popOverContent={ICONS_SVG.back.popOverContent}>
             {ICONS_SVG.remove}
           </MetabIconButton>
           <MetabIconButton
             showPopOver={true}
             iconSize="medium"
-            popOverContent={ICONS_SVG.back.popOverContent}
-          >
+            popOverContent={ICONS_SVG.back.popOverContent}>
             {ICONS_SVG.sidebar}
           </MetabIconButton>
           <MetabIconButton
             showPopOver={true}
             iconSize="medium"
-            popOverContent={ICONS_SVG.back.popOverContent}
-          >
+            popOverContent={ICONS_SVG.back.popOverContent}>
             {ICONS_SVG.close}
           </MetabIconButton>
         </FlexLayout>
       </FlexLayout>
       <FlexLayout
         className={`${classes.container} ${classes.pageTools}`}
-        height={Theme.SPACING(40)}
-      >
+        height={Theme.SPACING(40)}>
         <MetabIconButton
           showPopOver={true}
           iconSize="medium"
-          popOverContent={ICONS_SVG.back.popOverContent}
-        >
+          popOverContent={ICONS_SVG.back.popOverContent}>
           {ICONS_SVG.copy}
         </MetabIconButton>
         <MetabIconButton
           showPopOver={true}
           iconSize="medium"
-          popOverContent={ICONS_SVG.back.popOverContent}
-        >
+          popOverContent={ICONS_SVG.back.popOverContent}>
           {ICONS_SVG.reload}
         </MetabIconButton>
         <MetabIconButton
           showPopOver={true}
           iconSize="medium"
-          popOverContent={ICONS_SVG.back.popOverContent}
-        >
+          popOverContent={ICONS_SVG.back.popOverContent}>
           {ICONS_SVG.star}
         </MetabIconButton>
         <MetabIconButton showPopOver={true} iconSize="medium" popOverContent>

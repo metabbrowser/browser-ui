@@ -1,6 +1,6 @@
 import react from "react";
 import { ICONS_SVG } from "../../utils/theme";
-import MetabIconButton from "../../components/atomic/buttons";
+import MetabIconButton from "../../components/atomic/button";
 import FlexLayout from "../../components/atomic/flexLayout";
 const SvgTest = () => {
   return (
@@ -8,120 +8,103 @@ const SvgTest = () => {
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.back}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.camera.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.camera}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.close}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.copy}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.darkMode}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.drag}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.focus}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.info}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.next}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.notes}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.reload}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.remove}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.scribbble}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.sidebar}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.snooze}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.star}
       </MetabIconButton>
       <MetabIconButton
         showPopOver={true}
         popOverContent={ICONS_SVG.back.popOverContent}
-        iconSize="medium"
-      >
+        iconSize="medium">
         {ICONS_SVG.video}
       </MetabIconButton>
     </FlexLayout>

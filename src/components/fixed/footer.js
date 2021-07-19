@@ -1,6 +1,6 @@
 import react from "react";
 import Theme, { ICONS_SVG } from "../../utils/theme";
-import MetabIconButton from "../atomic/buttons";
+import MetabIconButton from "../atomic/button";
 import FlexLayout from "../atomic/flexLayout";
 import { makeStyles } from "@material-ui/core/styles";
 

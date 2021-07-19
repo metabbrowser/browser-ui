@@ -24,6 +24,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// Popper accepts children and renders them inside the material popper
+// Possible values.
+//  - top-start,
+//  - top,
+//  - top-end,
+//  - left-start,
+//  - left,
+//  - left-end,
+//  - right-start,
+//  - right,
+//  - right-end,
+//  - bottom-start,
+//  - bottom,
+//  - bottom-end
+
 export default function PositionedPopper(props) {
   const classes = useStyles();
   return (
@@ -47,8 +62,7 @@ export default function PositionedPopper(props) {
         },
       }}
       className={classes.popper}
-      style={{ ...props?.paperCSS }}
-    >
+      style={{ ...props?.paperCSS }}>
       {({ TransitionProps }) => (
         <Fade {...TransitionProps} timeout={350}>
           <Paper className={classes.paper}>
@@ -59,17 +73,3 @@ export default function PositionedPopper(props) {
     </Popper>
   );
 }
-
-// Possible values.
-//  top-start,
-//  top,
-//  top-end,
-//  left-start,
-//  left,
-//  left-end,
-//  right-start,
-//  right,
-//  right-end,
-//  bottom-start,
-//  bottom,
-//  bottom-end

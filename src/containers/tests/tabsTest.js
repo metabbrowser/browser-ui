@@ -1,7 +1,7 @@
 import react from "react";
 import Theme, { ICONS_SVG } from "../../utils/theme";
 import { makeStyles } from "@material-ui/core/styles";
-import MetabIconButton from "../../components/atomic/buttons";
+import MetabIconButton from "../../components/atomic/button";
 import FlexLayout from "../../components/atomic/flexLayout";
 import { ICONS } from "../../utils/constants";
 import { Divider } from "@material-ui/core";
@@ -18,6 +18,8 @@ const useStyles = makeStyles((theme) => ({
     color: Theme.COLORS.metab.color_1,
   },
 }));
+
+// TODO: Create an array to map over and show the tab buttons
 
 const TabsTest = (props) => {
   const classes = useStyles();
